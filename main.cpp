@@ -83,6 +83,8 @@ public:
 int main() {
     RenderWindow window(VideoMode(1000, 500), "Dinosaur!");
 
+    lable1:
+
     Texture F;
     F.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/pol.png");
     Sprite Floor(F);
@@ -129,6 +131,7 @@ int main() {
 
     bool play = false;
     bool go = false;
+    char fl = 1;
 
     Clock clock;
 
@@ -283,6 +286,7 @@ int main() {
             p.a = 2;
 
             play = false;
+            fl = 0;
 
             Over.setPosition(300,200);
             Naz.setPosition(450, 250);
@@ -308,8 +312,14 @@ int main() {
             window.draw(Score[i]);
         }
         window.display();
-    }
 
+        if (!fl) {
+            if (Keyboard::isKeyPressed(Keyboard::Space)) {
+                p.onGround = false;
+                goto lable1;
+            }
+        }
+    }
 
     return 0;
 }
