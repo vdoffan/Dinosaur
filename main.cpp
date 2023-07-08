@@ -86,23 +86,23 @@ int main() {
     lable1:
 
     Texture F;
-    F.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/pol.png");
+    F.loadFromFile("/home/andrey/Dinosaur/Paint/pol.png");
     Sprite Floor(F);
     Floor.scale(0.42, 1);
     Floor.setPosition(0, 450);
 
     Texture D;
-    D.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Din.png");
+    D.loadFromFile("/home/andrey/Dinosaur/Paint/Din.png");
     Player p(D);
 
     Texture arr[6];
     Sprite cactArr[6];
-    arr[0].loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cact/1.png");
-    arr[1].loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cact/2.png");
-    arr[2].loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cact/3.png");
-    arr[3].loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cact/4.png");
-    arr[4].loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cact/5.png");
-    arr[5].loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cact/6.png");
+    arr[0].loadFromFile("/home/andrey/Dinosaur/Paint/Cact/1.png");
+    arr[1].loadFromFile("/home/andrey/Dinosaur/Paint/Cact/2.png");
+    arr[2].loadFromFile("/home/andrey/Dinosaur/Paint/Cact/3.png");
+    arr[3].loadFromFile("/home/andrey/Dinosaur/Paint/Cact/4.png");
+    arr[4].loadFromFile("/home/andrey/Dinosaur/Paint/Cact/5.png");
+    arr[5].loadFromFile("/home/andrey/Dinosaur/Paint/Cact/6.png");
 
     for (int i = 0; i < 6; i++) {
         cactArr[i].setTexture(arr[i]);
@@ -122,7 +122,7 @@ int main() {
     int pt = rand() % 2 + 1;
 
     Texture Pt;
-    Pt.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Ptic.png");
+    Pt.loadFromFile("/home/andrey/Dinosaur/Paint/Ptic.png");
     Sprite Ptic(Pt);
     Ptic.setTextureRect(IntRect(0, 0, 93, 80));
     Ptic.setPosition(1000, 380 - 100 * (pt - 1));
@@ -136,17 +136,17 @@ int main() {
     Clock clock;
 
     Texture O;
-    O.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/GameOver.png");
+    O.loadFromFile("/home/andrey/Dinosaur/Paint/GameOver.png");
     Sprite Over(O);
     Over.setPosition(1000, 0);
 
     Texture N;
-    N.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Naz.png");
+    N.loadFromFile("/home/andrey/Dinosaur/Paint/Naz.png");
     Sprite Naz(N);
     Naz.setPosition(1000, 0);
 
     Texture Cf;
-    Cf.loadFromFile("/home/andrey/Desktop/dinosaur/Paint/Cifr.png");
+    Cf.loadFromFile("/home/andrey/Dinosaur/Paint/Cifr.png");
 
     Sprite Score[5];
     float cr[5] = {0};
